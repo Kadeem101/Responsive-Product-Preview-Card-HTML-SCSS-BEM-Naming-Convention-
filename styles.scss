@@ -1,0 +1,185 @@
+$mobile: 23.4375rem;
+$colour-primary-dark-cyan: hsl(158, 36%, 37%);
+$colour-primary-cream: hsl(30, 38%, 92%);
+$colour-neutral-very-dark-blue: hsl(212, 21%, 14%);
+$colour-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+$colour-neutral-white: hsl(0, 0%, 100%);
+$paragraph-font-size: 0.875rem;
+@mixin flexCenter ($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap') , 
+        url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $colour-primary-cream;
+}
+.main{
+  height: 100vh;
+  @include flexCenter(row);
+
+  &__container , &__container__right__item4 , &__container__right__item5{
+    @include flexCenter(row)
+  }
+
+  &__container{
+    height: 30rem;
+    width: 40rem;
+    border-radius: 0.625rem;
+    box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.15);
+
+    &__left , &__right{
+      width: 20rem;
+      height: 30rem;
+    }
+
+    &__left{
+      background-image: url("./images/image-product-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      border-top-left-radius: inherit;
+      border-bottom-left-radius: inherit;
+    }
+    &__right{
+      padding: 2.5rem;
+      background-color: $colour-neutral-white;
+      @include flexCenter(column);
+      align-items: flex-start;
+      justify-content: space-between;
+      border-top-right-radius: inherit;
+      border-bottom-right-radius: inherit;
+
+      &__item1{
+        letter-spacing: 0.25rem;
+      }
+
+      &__item1 , &__item3 , &__item4__price2 , &__item5{
+        font-size: $paragraph-font-size;
+        font-family: Montserrat;
+        color: $colour-neutral-dark-grayish-blue;
+        font-weight: 500;
+        line-height: 1.375rem;
+      }
+
+      &__item2 , &__item4__price1{
+        columns: $colour-neutral-very-dark-blue;
+        font-family: Fraunces;
+        line-height: 2rem;
+      }
+
+      &__item4{
+        justify-content: space-between;
+        width: 12.75rem;
+
+        &__price1{
+          color: $colour-primary-dark-cyan;
+        }
+        &__price2{
+          text-decoration: line-through;
+        }
+      }
+
+      &__item5{
+        width: 100%;
+        height: 3rem;
+        background-color: $colour-primary-dark-cyan;
+        color: $colour-neutral-white;
+        font-weight: 700;
+        gap: 0.5rem;
+        border-radius: 0.4375rem;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media (max-width: 40rem) {
+  .main{
+    &__container ,  &__container__left , &__container__right{
+      width: 37.5rem;
+      height: 40rem;
+    }
+
+    &__container{
+      @include flexCenter(column);
+
+      &__left{
+        background-size: cover;
+        background-position: 0 -13.75rem;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 0;
+      }
+
+      &__right{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: inherit;
+        padding: 1.3rem;
+
+        &__item1{
+          margin-bottom: -0.625rem;
+          letter-spacing: 0.3125rem;
+        }
+
+        &__item3{
+        line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  
+}
+
+@media (max-width:$mobile) {
+  .main{
+    &__container{
+      @include flexCenter(column);
+      width: 20.9375rem;
+      height: 40rem;
+
+      &__left{
+        background-size: cover;
+        background-position: 0 -7.8125rem;
+        width: 20.9375rem;
+        height: 16rem;
+        border-top-right-radius: inherit;
+        border-bottom-left-radius: 0;
+      }
+
+      &__right{
+        width: 20.9375rem;
+        height: 24rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: inherit;
+        padding: 1.3rem;
+
+        &__item1{
+          margin-bottom: -1.25rem;
+          letter-spacing: 0.1875rem;
+        }
+
+        &__item3{
+        line-height: 1.5rem;
+        }
+      }
+    }
+  }
+  
+}
+
+.footer{
+  font-size: 0.6875rem; text-align: center;
+
+  &__link{
+    color: hsl(228, 45%, 44%);
+  }
+}

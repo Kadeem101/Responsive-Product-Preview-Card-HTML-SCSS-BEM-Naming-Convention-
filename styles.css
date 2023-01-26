@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.main__container, .main__container__right__item4, .main__container__right__item5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.main__container {
+  height: 30rem;
+  width: 40rem;
+  border-radius: 0.625rem;
+  box-shadow: 0px 0px 5px hsla(0deg, 0%, 0%, 0.15);
+}
+.main__container__left, .main__container__right {
+  width: 20rem;
+  height: 30rem;
+}
+.main__container__left {
+  background-image: url("./images/image-product-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+.main__container__right {
+  padding: 2.5rem;
+  background-color: hsl(0deg, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+.main__container__right__item1 {
+  letter-spacing: 0.25rem;
+}
+.main__container__right__item1, .main__container__right__item3, .main__container__right__item4__price2, .main__container__right__item5 {
+  font-size: 0.875rem;
+  font-family: Montserrat;
+  color: hsl(228deg, 12%, 48%);
+  font-weight: 500;
+  line-height: 1.375rem;
+}
+.main__container__right__item2, .main__container__right__item4__price1 {
+  -moz-columns: hsl(212deg, 21%, 14%);
+       columns: hsl(212deg, 21%, 14%);
+  font-family: Fraunces;
+  line-height: 2rem;
+}
+.main__container__right__item4 {
+  justify-content: space-between;
+  width: 12.75rem;
+}
+.main__container__right__item4__price1 {
+  color: hsl(158deg, 36%, 37%);
+}
+.main__container__right__item4__price2 {
+  text-decoration: line-through;
+}
+.main__container__right__item5 {
+  width: 100%;
+  height: 3rem;
+  background-color: hsl(158deg, 36%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  gap: 0.5rem;
+  border-radius: 0.4375rem;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 40rem) {
+  .main__container, .main__container__left, .main__container__right {
+    width: 37.5rem;
+    height: 40rem;
+  }
+  .main__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .main__container__left {
+    background-size: cover;
+    background-position: 0 -13.75rem;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0;
+  }
+  .main__container__right {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: inherit;
+    padding: 1.3rem;
+  }
+  .main__container__right__item1 {
+    margin-bottom: -0.625rem;
+    letter-spacing: 0.3125rem;
+  }
+  .main__container__right__item3 {
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 23.4375rem) {
+  .main__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20.9375rem;
+    height: 40rem;
+  }
+  .main__container__left {
+    background-size: cover;
+    background-position: 0 -7.8125rem;
+    width: 20.9375rem;
+    height: 16rem;
+    border-top-right-radius: inherit;
+    border-bottom-left-radius: 0;
+  }
+  .main__container__right {
+    width: 20.9375rem;
+    height: 24rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: inherit;
+    padding: 1.3rem;
+  }
+  .main__container__right__item1 {
+    margin-bottom: -1.25rem;
+    letter-spacing: 0.1875rem;
+  }
+  .main__container__right__item3 {
+    line-height: 1.5rem;
+  }
+}
+.footer {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.footer__link {
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
